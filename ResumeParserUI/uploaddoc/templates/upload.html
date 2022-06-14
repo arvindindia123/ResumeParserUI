@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% load static %}
+
+<img src="{% static '/images/Usha_Martin.png' %}" alt="logo">
+<!--<img src="{% static '/images/img.png' %}" alt="logo2">-->
+<img src="{% static '/images/nlp.png' %}" alt="logo3">
+
+<h1><b>AI BOT - Resuming Screening at lightening speed</b></h1>
+<p><i>Welcome to AI BOT Resume Screening</i></p>
+<form action="add/" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<br><br>
+    <h4>Please provide the CV and submit to let AI screen the CV for you</h4>
+    <input name="files" type="file">
+<input type="submit" value="Submit">
+</form>
+<br><br>
+<div><b>Resume</b><br>{{resume}}</div><br>
+<div><b>Candidate Name</b><br>{{candidate_name}}</div><br>
+<div><b>Mobile No</b><br>{{mob}}</div><br>
+<div><b>Email Address</b><br>{{email}}</div><br>
+<div><b>Skills</b><br>{{skill}}</div><br>
+<div><b>Education</b><br>{{edu}}</div><br>
+
+</body>
+<footer><i>&copy; Copyright 2022 Arvind K Sinha, Dr. Amir Khusru Akthar @Usha Martin University,Ranchi</i>
+</footer>
+
+</html>
